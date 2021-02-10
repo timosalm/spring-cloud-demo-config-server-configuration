@@ -1,0 +1,7 @@
+management.metrics.export.wavefront.api-token: 3e9a13e6-4acd-44c3-9522-7dcf9d014fa3
+management.metrics.export.wavefront.uri: https://vmware.wavefront.com
+wavefront.application.name: spring-cloud-demo-cf
+spring.cloud.stream.bindings:
+  shipOrder-in-0.destination: order-shipping-exchange
+  shipOrder-out-0.destination: order-delivered-exchange
+shipping.duration: 10000
