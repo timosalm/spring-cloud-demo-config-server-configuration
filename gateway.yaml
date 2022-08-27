@@ -1,0 +1,10 @@
+spring.cloud.gateway:
+  routes:
+  - id: product-service-route
+    uri: http://product-service.vmware-explore
+    predicates:
+    - Path=/product-service/
+  - id: order-service-route
+    uri: http://order-service.vmware-explore
+    predicates:
+    - Path=/order-service/
