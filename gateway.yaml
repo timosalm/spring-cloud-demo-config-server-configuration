@@ -4,7 +4,11 @@ spring.cloud.gateway:
     uri: http://product-service.vmware-explore
     predicates:
     - Path=/product-service/
+    filters:
+    - StripPrefix=1
   - id: order-service-route
     uri: http://order-service.vmware-explore
     predicates:
     - Path=/order-service/
+    filters:
+    - StripPrefix=1
