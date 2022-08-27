@@ -1,4 +1,1 @@
-management.metrics.export.wavefront.api-token: 3e9a13e6-4acd-44c3-9522-7dcf9d014fa3
-management.metrics.export.wavefront.uri: https://vmware.wavefront.com
-wavefront.application.name: spring-cloud-demo-cf
-product-service.product-names: Tanzu Application Service, Tanzu Build Service, Tanzu Observability
+product-service.product-names: VMware Tanzu Application Service, VMware Tanzu Build Service, VMware Tanzu Observability
