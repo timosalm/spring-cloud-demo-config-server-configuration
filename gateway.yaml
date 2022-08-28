@@ -6,9 +6,11 @@ spring.cloud.gateway:
     - Path=/product-service/**
     filters:
     - StripPrefix=1
+    - TokenRelay=
   - id: order-service-route
     uri: http://order-service.vmware-explore
     predicates:
     - Path=/order-service/**
     filters:
     - StripPrefix=1
+    - TokenRelay=
