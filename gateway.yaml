@@ -1,16 +1,18 @@
 spring.cloud.gateway:
   routes:
-  - id: product-service-route
+  - id: product-service
     uri: http://product-service.dev-space
     predicates:
-    - Path=/services/product-service/**
+    - Path=/services/product-service/**, /v3/api-docs/product-service
     filters:
     - StripPrefix=2
     - TokenRelay=
-  - id: order-service-route
+    - RewritePath=product-service, /v3/api-docs
+  - id: order-service
     uri: http://order-service.dev-space
     predicates:
-    - Path=/services/order-service/**
+    - Path=/services/order-service/**, /v3/api-docs/order-service
     filters:
     - StripPrefix=2
     - TokenRelay=
+    - RewritePath=order-service, /v3/api-docs
