@@ -1,14 +1,14 @@
 spring.cloud.gateway:
   routes:
   - id: product-service-route
-    uri: http://product-service.vmware-explore
+    uri: http://product-service.dev-space
     predicates:
     - Path=/services/product-service/**
     filters:
     - StripPrefix=2
     - TokenRelay=
   - id: order-service-route
-    uri: http://order-service.vmware-explore
+    uri: http://order-service.dev-space
     predicates:
     - Path=/services/order-service/**
     filters:
