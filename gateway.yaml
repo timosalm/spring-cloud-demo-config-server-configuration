@@ -14,3 +14,17 @@ spring.cloud.gateway:
     filters:
     - StripPrefix=2
     - TokenRelay=
+  - id: frontend
+    uri: http://frontend.dev-space
+    predicates:
+    - Path=/frontend/**
+    filters:
+    - StripPrefix=1
+  - id: authserver
+    uri: https://authserver-1-dev-space.emea.end2end.link
+    predicates:
+    - Path=/authserver/**
+    filters:
+    - StripPrefix=1
+    
+  
