@@ -1,4 +1,10 @@
 spring.cloud.gateway:
+  globalcors:
+    cors-configurations:
+      '[/**]':
+        allowedOrigins: "*"
+        allowedMethods:
+        - "*"
   routes:
   - id: product-service
     uri: http://product-service.dev-space
