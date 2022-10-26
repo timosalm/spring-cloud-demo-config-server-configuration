@@ -5,6 +5,7 @@ spring.cloud.gateway:
         allowedOrigins: "*"
         allowedMethods: "*"
         allowedHeaders: "*"
+        allowCredentials: true
   routes:
   - id: product-service
     uri: http://product-service.dev-space
