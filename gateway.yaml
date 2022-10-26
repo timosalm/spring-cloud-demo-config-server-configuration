@@ -2,7 +2,7 @@ spring.cloud.gateway:
   globalcors:
     cors-configurations:
       '[/**]':
-        allowedOrigins: "*"
+        allowedOriginPatterns: "https://*.emea.end2end.link"
         allowedMethods: "*"
         allowedHeaders: "*"
         allowCredentials: true
