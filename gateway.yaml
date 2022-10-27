@@ -1,4 +1,13 @@
 spring.cloud.gateway:
+  globalcors:
+    corsConfigurations:
+      '[/**]':
+        allowedOrigins: "https://tap-gui.emea.end2end.link"
+        allowedMethods:
+        - POST
+        - GET
+        - OPTIONS
+        allowedHeaders: "*"
   routes:
   - id: product-service
     uri: http://product-service.dev-space
