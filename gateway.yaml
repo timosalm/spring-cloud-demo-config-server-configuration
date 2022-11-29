@@ -18,11 +18,6 @@ spring.cloud.gateway:
     - Path=/frontend/**
     filters:
     - StripPrefix=1
-  globalcors:
-    corsConfigurations:
-      '[/**]':
-        allowedOrigins: "https://tap-gui.emea.end2end.link"
-        allowedMethods:
-        - GET
+  globalcors.enabled: false
     
   
