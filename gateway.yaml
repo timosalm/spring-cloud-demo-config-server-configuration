@@ -25,7 +25,5 @@ spring.cloud.gateway:
       allowedMethods:
         - "*"
       allowedHeaders:
-        - "*"
-      allowCredentials: true
-    
+        - "*"    
   
