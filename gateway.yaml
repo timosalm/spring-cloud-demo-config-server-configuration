@@ -18,6 +18,14 @@ spring.cloud.gateway:
     - Path=/frontend/**
     filters:
     - StripPrefix=1
-  globalcors.enabled: false
+  globalcors.corsConfigurations:
+    '[/**]':
+      allowedOrigins:
+        - "*"
+      allowedMethods:
+        - "*"
+      allowedHeaders:
+        - "*"
+      allowCredentials: true
     
   
