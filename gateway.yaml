@@ -1,19 +1,19 @@
 spring.cloud.gateway:
   routes:
   - id: product-service
-    uri: http://product-service.dev-space
+    uri: http://product-service.sc-architecture
     predicates:
     - Path=/services/product-service/**
     filters:
     - StripPrefix=2
   - id: order-service
-    uri: http://order-service.dev-space
+    uri: http://order-service.sc-architecture
     predicates:
     - Path=/services/order-service/**
     filters:
     - StripPrefix=2
   - id: frontend
-    uri: http://frontend.dev-space
+    uri: http://frontend.sc-architecture
     predicates:
     - Path=/frontend/**
     filters:
